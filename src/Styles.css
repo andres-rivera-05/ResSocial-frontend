@@ -3,9 +3,9 @@ body{
 }
 
 input.form-control-plaintext {
-    background-color: #141414;
+    background-color: #121212;
     border-radius: 7px;
-    border: 1px solid #232323;
+    border: none;
     padding: 8px;
 }
 
@@ -28,4 +28,113 @@ input.form-control-plaintext {
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
+}
+
+.contenedor-border {
+    border: 1px solid #303030;
+    padding: 10px 10px;
+}
+
+
+/*fhuishdifdfd*/
+
+
+.textarea-no-resize {
+    resize: none;
+    /* Evita que el usuario pueda redimensionar el textarea */
+}
+
+/* Estilo para ocultar la esquina de redimensionamiento */
+.textarea-no-resize::-webkit-resizer {
+    display: none;
+}
+
+.textarea-no-resize::-moz-resizer {
+    display: none;
+}
+
+.textarea-no-resize::-o-resizer {
+    display: none;
+}
+
+.textarea-no-resize::-ms-resizer {
+    display: none;
+}
+
+textarea.form-control {
+    background-color: #000;
+    color: white !important;
+    border: none;
+    font-size: 21px;
+    min-height: 77px;
+}
+
+textarea#floatingTextarea {
+    border-bottom: 1px solid #303030;
+}
+
+.form-control:focus {
+    color: #444;
+    background-color: #000;
+    border-color: #739ac2;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(55, 90, 127, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(55, 90, 127, 0.25);
+}
+
+button.btn-close.btn.btn-primary.w-50 {
+    width: 120px !important;
+}
+
+/*estilos modificso de las cards*/
+
+.card.text-white.bg-secondary.mb-3.mx-auto.mt-3 {
+    border: none;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: #000;
+        padding-bottom: 0px;
+        font-weight: bold;
+}
+
+.card.text-white.bg-secondary.mx-auto {
+    border-radius: inherit;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #303030;
+}
+
+.card-header:first-child {
+    border-radius: inherit !important;
+}
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: #000;
+    padding-top: 0px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.col-12.col-sm-12.col-md-12.col-lg-6.contenedor-border.mx-auto.p-0.rt {
+    border-top: none;
+    border-bottom: none;
+}
+
+p.d-inline-flex.gap-4 {
+    margin: 0;
+    background-color: black;
+}
+
+a.btn.btn-primary.m-1.w-100.tr {
+    background-color: black !important;
+    border-color: #3f3f3f;
+}
+
+.card.card-body {
+    background-color: #080808;
+    border-radius: 0;
 }

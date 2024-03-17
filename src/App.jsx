@@ -6,6 +6,7 @@ import { Muro } from './Components/Muro'
 import { InicioSesion } from './Components/InicioSesion'
 import { Registro } from './Components/Registro'
 import { Comentarios } from './Components/Comentarios'
+import { CrearPublicacion } from './Components/CrearPublicacion'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/muro' element={<Muro />} />
         <Route path='/registro' element={<Registro />} />
         <Route path='/comentarios' element={<Comentarios />} />
+        <Route path='/crearpublicacion' element={<CrearPublicacion />} />
        </Routes>
       </BrowserRouter>
     </>
