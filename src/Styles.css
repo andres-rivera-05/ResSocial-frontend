@@ -1,0 +1,31 @@
+body{
+    background-color: #000;
+}
+
+input.form-control-plaintext {
+    background-color: #141414;
+    border-radius: 7px;
+    border: 1px solid #232323;
+    padding: 8px;
+}
+
+.contenedor-registro{
+    border: 1px solid gray;
+}
+
+.contenedor-registro {
+    border: 1px solid #232323;
+    padding: 26px;
+    border-radius: 10px;
+}
+.btn{
+    border-radius: 30px !important;
+    background-color: #016c93 !important;
+}
+
+.estado{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
