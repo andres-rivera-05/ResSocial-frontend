@@ -135,6 +135,52 @@ a.btn.btn-primary.m-1.w-100.tr {
 }
 
 .card.card-body {
-    background-color: #080808;
+    background-color: #060606;
     border-radius: 0;
+}
+
+/*estilos comentarios*/
+
+p.autor-comentario {
+    margin: 0;
+    font-weight: bold;
+}
+
+.header-comentario {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+p.fecha-comentario {
+    font-size: 12px;
+    color: gray;
+    margin: 0;
+}
+
+.contenido-comentario {
+    border-bottom: 1px solid #353535;
+    margin-bottom: 10px;
+}
+
+.col-sm-9.content-input {
+    padding: 0;
+}
+
+input#staticEmail {
+    border-radius: 35px;
+}
+
+.container-coment {
+    padding: 19px;
+}
+
+.container-fluid.rt {
+    background: black;
+    padding: 12px;
+}
+
+.row.rt {
+    justify-content: space-between;
+    margin: 0;
 }

@@ -1,6 +1,7 @@
 import React,{ useEffect, useState, useContext  } from 'react'
 import axios from 'axios';
 import UserContext from './UsuarioProvider';
+import { Comentarios } from './Comentarios';
 
 export const Muro = () => {
 
@@ -90,7 +91,8 @@ export const Muro = () => {
                     </a>
                   </p>
                   <div className="collapse" id={`coment${item.id}`}>
-                    <div className="card card-body">             
+                    <div className="card card-body p-0">     
+                    <Comentarios id={item.id}/>        
                     </div>
                   </div>
                 </div>
