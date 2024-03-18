@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 export const Registro = () => {
 
-  const url = "http://localhost:7000/api/usuario"
+  const url = "http://192.168.1.42:7000/api/usuario"
 
   const [usuario, setUsuario] = useState('');
   const [correo, setCorreo] = useState('');

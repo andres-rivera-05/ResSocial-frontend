@@ -21,7 +21,7 @@ export const InicioSesion = () => {
 
   const onSubmitHandler = async () => {
     event.preventDefault();
-    const url = `http://localhost:7000/api/usuario/${dataForm.nombre_usuario}/${dataForm.pass}`
+    const url = `http://192.168.1.42:7000/api/usuario/${dataForm.nombre_usuario}/${dataForm.pass}`
 
     try {
       const result = await axios.get(url)
