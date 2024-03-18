@@ -12,6 +12,7 @@ export const Muro = () => {
   const { usuario } = useContext(UserContext)
   const [resultado, setResultado] = useState('')
   const [resultadoID, setResultadoID] = useState('')
+  const [isloading, setIsLoading] = useState(true)
 
   //obetener el valor del comnetario publicado
   const handleResultData = (data) => {
@@ -29,6 +30,8 @@ export const Muro = () => {
       setDataMuro(response.data);
     } catch (err) {
       throw new err("Error al cargar los datos");
+    }finally{
+      setIsLoading(true)
     }
   }
 
@@ -140,6 +143,13 @@ export const Muro = () => {
         <div className="col-12 col-sm-12 col-md-12 col-lg-12 contenedor-border mx-auto p-0 rt">
           <div className="col-12 col-sm-12 col-md-12 col-lg-12 px-0">
             {
+              isloading ? (
+                <div className="d-flex justify-content-center mt-5 mb-5">
+                  <div className="spinner-border text-primary" role="status">
+                    <span className="visually-hidden"></span>
+                  </div>
+                </div>
+              ) : (
               dataMuro.map((item) => (
                 <div key={item.id} className="card text-white bg-secondary mx-auto " bis_skin_checked="1">
                   <div className="card-header" bis_skin_checked="1">
@@ -158,6 +168,7 @@ export const Muro = () => {
                   </div>
                 </div>
               ))
+              )
             }
           </div>
         </div>

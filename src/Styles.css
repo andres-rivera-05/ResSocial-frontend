@@ -261,3 +261,7 @@ span.fecha-post {
     color: gray;
     font-family: sans-serif;
 }
+
+.text-primary {
+    color: #06b5f5 !important;
+}
