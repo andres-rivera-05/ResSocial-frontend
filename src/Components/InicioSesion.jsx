@@ -8,7 +8,8 @@ export const InicioSesion = () => {
   const [dataForm, setDataForm] = useState({ nombre_usuario: " ", pass: " " });
   const [estado, setEstado] = useState('')
   const navigate = useNavigate();
-  const { setUsuario } = useContext(UserContext)
+  //const { setUsuario } = useContext(UserContext)
+  const { actualizarUsuario } = useContext(UserContext);
 
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
@@ -26,7 +27,10 @@ export const InicioSesion = () => {
     try {
       const result = await axios.get(url)
       const resultData = (result).data;
-      setUsuario(resultData[0].nombre_usuario)
+      actualizarUsuario(resultData[0].nombre_usuario);
+      // aqui guardo el nombre de usuario en el localStorage
+      localStorage.setItem('nombreUsuario', resultData[0].nombre_usuario);
+      //setUsuario(resultData[0].nombre_usuario)
       navigate('/muro')
     } catch (err) {
       setEstado("Usuario o Contrasena incorrectos.")
