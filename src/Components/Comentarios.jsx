@@ -9,8 +9,7 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
   const [caption, setCaption] = useState('')
   const [contador, setContador] = useState(0)
   const { usuario } = useContext(UserContext);
-  const [comentarioEditadoId, setComentarioEditadoId] = useState(null);
-
+ 
 
   useEffect(() => {
     const getComentarios = async () => {
@@ -58,7 +57,6 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
   }
 
 
-  console.log(comentarioEditadoId)
 
   const getEditComentario = async (comentarioEditadoId) => {
     const url = `http://192.168.1.42:7000/api/comentarios/editar/${comentarioEditadoId}`
@@ -106,10 +104,10 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
               <form onSubmit={submitHandler}>
                 <fieldset>
                   <div className="row" bis_skin_checked="1">
-                    <div className="col-sm-9 content-input" bis_skin_checked="1">
+                    <div className="col-sm-12 content-input" bis_skin_checked="1">
                       <input type="text" className="form-control-plaintext" id="staticEmail" name='caption' placeholder='Escribe un comentario' value={caption} onChange={captionHandler}></input>
                     </div>
-                    <div className="col-sm-3" bis_skin_checked="1">
+                    <div className="col-sm-12 mt-2" bis_skin_checked="1">
                       <button type="submit" className="btn btn-primary">Responder</button>
                     </div>
                   </div>

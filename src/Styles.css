@@ -21,7 +21,7 @@ input.form-control-plaintext {
 
 .btn {
     border-radius: 30px !important;
-    background-color: #016c93 !important;
+    background-color: #06b5f5 !important;
 }
 
 .estado {
@@ -212,4 +212,52 @@ input#staticEmail {
 
 .contenedor-muro {
     white-space: pre-line;
+}
+
+.modal-content {
+    background-color: black;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.col-12.col-sm-12.col-md-12.col-lg-12.contenedor-border.mx-auto {
+    width: 100%;
+    max-width: 550px;
+}
+
+.btn-primary:focus,.btn-primary.focus{
+    color: #444;
+    background-color: #000000;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(55, 90, 127, 0) !important;
+    box-shadow: 0 0 0 0.2rem rgb(139 139 139 / 0%) !important;
+}
+
+.form-control:focus {
+    color: #444;
+    background-color: #000;
+    border-color: #739ac2;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 0%);
+    box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 0%);
+}
+
+p.contenedor-muro {
+    margin-bottom: 0;
+}
+
+.col-sm-12.mt-2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+span.fecha-post {
+    font-weight: 500;
+    font-size: 13px;
+    color: gray;
+    font-family: sans-serif;
 }
