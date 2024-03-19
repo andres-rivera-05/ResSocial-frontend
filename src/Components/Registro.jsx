@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export const Registro = () => {
 
@@ -13,6 +14,8 @@ export const Registro = () => {
   const [passConfirm, setPassConfirm] = useState('');
   const [estado, setEstado] = useState('');
 
+  const navigate = useNavigate()
+
 
   const submitHnadler = async () => {
     event.preventDefault();
@@ -25,6 +28,12 @@ export const Registro = () => {
           confirmacion_con: passConfirm
     }
     
+    if (usuario.length ===0 || correo.length === 0 || nombre.length ===0 
+      || apellido.length === 0 || pass.length === 0 || passConfirm.length ===0){
+      setEstado('completa todos los campos')
+      return
+    }
+    
     if(pass === passConfirm){
       const result = await axios.post(url, data);
       const resultData = (result).data;
@@ -34,6 +43,10 @@ export const Registro = () => {
     }
   }
 
+  const onClickLogin = () => {
+      navigate('/')
+  }
+
   return (
     <div>
 
@@ -41,7 +54,9 @@ export const Registro = () => {
         <div className="col-12 col-sm-12 col-md-8 col-lg-6 mx-auto contenedor-registro">
           <form onSubmit={submitHnadler} >
             <fieldset>
-              <legend className='text-center mb-5'>Registrarse</legend>
+              <legend className='text-center mb-5'>
+                <button type="button" onClick={onClickLogin} className="btn btn-primary btn-sm trt"><svg xmlns="http://www.w3.org/2000/svg" className="sert" width={15} viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" /></svg></button>
+                Registrarse</legend>
 
               <div className="form-group row">
                 <label className="col-sm-3 col-form-label">Usuario</label>

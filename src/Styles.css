@@ -332,3 +332,15 @@ button.btn.rte {
     padding: 2px 9px;
     background: #101010 !important;
 }
+
+button.btn.btn-primary.btn-sm.trt {
+    padding: 2px 6px;
+    height: 29px;
+}
+
+legend.text-center.mb-5 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    align-items: center;
+}
