@@ -13,7 +13,7 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
   useEffect(() => {
     const getComentarios = async () => {
       try {
-        const url = `http://192.168.1.42:7000/api/comentarios/${id}`;
+        const url = `http://localhost:7000/api/comentarios/${id}`;
         const response = await axios.get(url);
         setComentario(response.data)
         // console.log(response.data[0].num_comentarios)
@@ -33,7 +33,7 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
   const submitHandler = async () => {
     event.preventDefault();
     try {
-      const url = `http://192.168.1.42:7000/api/comentarios/comentarios/${id}`;
+      const url = `http://localhost:7000/api/comentarios/comentarios/${id}`;
 
       const data = {
         nombre_usuario: usuario,
@@ -49,7 +49,7 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
   }
 
   const deleteComentario = async (id) => {
-    const url = `http://192.168.1.42:7000/api/comentarios/delete/${id}`;
+    const url = `http://localhost:7000/api/comentarios/delete/${id}`;
     const result = await axios.delete(url);
     const resultData = (result).data;
     setContador(contador + 1)
@@ -58,7 +58,7 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
 
 
   const getEditComentario = async (comentarioEditadoId) => {
-    const url = `http://192.168.1.42:7000/api/comentarios/editar/${comentarioEditadoId}`
+    const url = `http://localhost:7000/api/comentarios/editar/${comentarioEditadoId}`
     const resul = await axios.get(url)
     const resultData = (resul.data[0].caption)
     onResultData(resultData)

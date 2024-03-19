@@ -26,7 +26,7 @@ export const Muro = () => {
 
   const getDatos = async () => {
     try {
-      const url = "http://192.168.1.42:7000/api/publicacion";
+      const url = "http://localhost:7000/api/publicacion";
       const response = await axios.get(url);
       setDataMuro(response.data);
     } catch (err) {
@@ -56,7 +56,7 @@ export const Muro = () => {
   const submitHandler = async (event) => {
     event.preventDefault();
     try {
-      const url = "http://192.168.1.42:7000/api/publicacion";
+      const url = "http://localhost:7000/api/publicacion";
       const data = {
         caption: caption,
         nombre_usuario: usuario
@@ -77,7 +77,7 @@ export const Muro = () => {
   
 
   const putComentario = async () => {
-    const url = `http://192.168.1.42:7000/api/comentarios/editComentario/${resultadoID}`
+    const url = `http://localhost:7000/api/comentarios/editComentario/${resultadoID}`
     const data = {
       caption: resultado,
       nombre_usuario: usuario
@@ -90,7 +90,7 @@ export const Muro = () => {
   }
 
   const deletPublicacion = async (id) => {
-    const url = `http://192.168.1.42:7000/api/publicacion/eliminar/${id}`;
+    const url = `http://localhost:7000/api/publicacion/eliminar/${id}`;
     const result = await axios.delete(url);
     setContador(contador + 1);
     //console.log(`Se elimino la publicacion con el id ${id}`)
