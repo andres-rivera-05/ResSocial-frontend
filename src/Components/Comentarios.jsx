@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import UserContext from './UsuarioProvider';
 import axios from 'axios';
-import { EditComentarioModal } from './EditComentarioModal';
 
 export const Comentarios = ({ id, onResultData, onIdSelec }) => {
 
@@ -17,7 +16,7 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
         const url = `http://192.168.1.42:7000/api/comentarios/${id}`;
         const response = await axios.get(url);
         setComentario(response.data)
-        //  console.log(response.data[0].num_comentarios)
+        // console.log(response.data[0].num_comentarios)
       } catch (err) {
         console.error('Error al obtener los comentarios:', err);
       }
@@ -72,6 +71,7 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
 
   return (
     <>
+
       <div className="container-coment">
         <div className="row">
           <div className="col-12 contenedor-comentarios">
@@ -84,11 +84,19 @@ export const Comentarios = ({ id, onResultData, onIdSelec }) => {
                       <p className='fecha-comentario'>{item.comentario_fecha}</p>
                     </div>
                     <div className="content-btns">
-                      <button type="button" className="btn btn-closes" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onClick={() => {
-                        getEditComentario(item.comentario_id); handlerEditId(item.comentario_id);
-                      }}>/</button>
-                      <button type="button" className="btn btn-closes" onClick={() => deleteComentario(item.comentario_id)}>X</button> 
-                    </div>             
+                      <div className="btn-group dropstart">
+                        <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width={15} height={15}><path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" /></svg>
+                        </button>
+                        <ul className="dropdown-menu">
+                          <li>
+                            <button type="button" className="btn btn-closes" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onClick={() => {
+                              getEditComentario(item.comentario_id); handlerEditId(item.comentario_id);
+                            }}>Editar comentario</button></li>
+                          <li> <button type="button" className="btn btn-closes t" onClick={() => deleteComentario(item.comentario_id)}>Eliminar comentario</button> </li>
+                        </ul>
+                      </div>
+                   </div>             
                   </div>
                   <p className='caption-comentario'>{item.comentario_contenido}</p>
                 </div>

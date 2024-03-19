@@ -229,7 +229,8 @@ input#staticEmail {
     max-width: 550px;
 }
 
-.btn-primary:focus,.btn-primary.focus{
+.btn-primary:focus,
+.btn-primary.focus {
     color: #444;
     background-color: #000000;
     outline: 0;
@@ -264,4 +265,70 @@ span.fecha-post {
 
 .text-primary {
     color: #06b5f5 !important;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+button.btn.btn-secondary.dropdown-toggle {
+    line-height: 1.305;
+}
+
+button.btn.btn-secondary.dropdown-toggle {
+    line-height: 1;
+    padding: 4px 4px;
+    display: flex;
+    fill: white;
+    background: #060606 !important;
+    border: none;
+}
+
+button.btn.btn-secondary.dropdown-toggle:hover {
+    background: #111f25 !important;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus {
+    color: #fff;
+    background-color: #313131;
+    border-color: #2b2a2a;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(96, 96, 96, 0.5);
+    box-shadow: 0 0 0 0.2rem rgb(96 96 96 / 0%) !important;
+}
+
+button.btn.btn-closes {
+    background: #000 !important;
+    font-size: 15px;
+    font-family: 'Lato';
+    font-weight: 700;
+    border-radius: 0px !important;
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: justify;
+}
+
+ul.dropdown-menu.show {
+    background: #000;
+    box-shadow: 1px 1px 8px #ffffff1a;
+}
+
+.dropdown-menu {
+    min-width: 12rem;
+}
+
+button.btn.btn-closes.t {
+    color: #ff3333;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button.btn.rte {
+    padding: 2px 9px;
+    background: #101010 !important;
 }
